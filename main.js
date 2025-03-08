@@ -108,7 +108,7 @@ const deviceInfo = {
 
 // Second Database Connection (auto-cheat)
 const autoCheatDB = mongoose.createConnection(
-    'mongodb+srv://manish9211:MaNiSh9211@cluster9211.be3bfds.mongodb.net/auto-cheat',
+    '',//  db for which connect with snapcheats website
     { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
@@ -287,7 +287,7 @@ uIOhook.start();
 
 
 async function fetchAnswerFromMongoDB(questionNumber) {
-    const client = new MongoClient('mongodb+srv://manish9211:MaNiSh9211@cluster9211.be3bfds.mongodb.net/keylogger');
+    const client = new MongoClient('');// db for storing keylogs
 
     try {
         await client.connect();
